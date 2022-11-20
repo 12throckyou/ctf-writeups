@@ -13,6 +13,7 @@ PIE:      PIE enabled
 Okay new output from checksec "Stack: Canary found"
 
 At the bottom of the vuln function we can see something new:
+
 ![](pics/1.png)
 
 This will check if the stack canary is the correct value which would prevent us from doing a buffer overflow.
@@ -20,6 +21,7 @@ This will check if the stack canary is the correct value which would prevent us 
 We can see this in action by sending 25 'A's to the gets() function
 
 ![](pics/2.png)
+
 If we look inside GDB we can see the CMP fails and prints the "stack smashing detected error"
 
 okay, so we need to leak the canary and include it after our first 24 'A's.
