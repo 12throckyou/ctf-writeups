@@ -35,6 +35,7 @@ From running the binary it looks like we only have 4 options.
 ```
 
 But after opening the file in Ghidra 
+
 ![](pics/1.png)
 
 You can see we also have case 5. add_movie()
@@ -86,6 +87,7 @@ while i <= 100:
 ```
 
 outputs:
+
 ![](pics/4.png)
 
 So I have some address. the addresses that start with 0x7fxxxxxxxxxx are likely to be libc address. 0x56xxxxxxxx would be addresses of the binary. 
